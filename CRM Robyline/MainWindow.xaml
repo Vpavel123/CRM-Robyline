@@ -4,9 +4,10 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:viewmodels="clr-namespace:CRM_Robyline.ViewModel"
+        xmlns:sb="clr-namespace:CRM_Robyline.Model"
         xmlns:local="clr-namespace:CRM_Robyline"
         mc:Ignorable="d"
-        Title="CRM Robyline" Height="1080" Width="1920">
+        Title="CRM Robyline" Height="1080" Width="1920" Loaded="Window_Loaded">
     <Window.DataContext>
         <viewmodels:MainWindowModel/>
     </Window.DataContext>
@@ -19,6 +20,10 @@
             <RowDefinition Height="0.1*"/>
             <RowDefinition Height="0.9*"/>
         </Grid.RowDefinitions>
-        <Grid Name="" Grid.Row="2"/>
+        <sb:UserControlSidebar Grid.Row="1"/>
+
+        <Grid Name="PageSwap" Grid.Column="2" Grid.Row="2">
+            
+        </Grid>
     </Grid>
 </Window>
